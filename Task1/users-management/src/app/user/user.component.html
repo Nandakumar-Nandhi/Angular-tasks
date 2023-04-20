@@ -1,0 +1,19 @@
+<div class="card border-2"  
+     *ngIf="user"
+     [class.border-success]="!user.isDeleted"
+     [class.border-danger]="user.isDeleted"
+     >
+    <div class="card-body d-flex flex-column">
+        <h5 class="card-title">
+            {{user.firstName + " " +user.lastName}}
+        </h5>
+        <button type="button" 
+                class="btn btn-sm align-self-end"
+                [class.btn-danger]="btnName=='Deactivate'"
+                [class.btn-success]="btnName=='Activate'"
+                [class.btn-primary]="btnName=='Details'"
+                (click)="callBack(user)">
+            {{btnName}}
+        </button>
+    </div>
+</div>

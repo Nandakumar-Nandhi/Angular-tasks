@@ -1,0 +1,29 @@
+<div class="container-fluid my-3">
+    <div class="container-fluid my-3" *ngIf="selectedUser">
+        <div class="card" >
+            <div class="card-body">
+                <h5 class="card-title">{{selectedUser.firstName}} {{selectedUser.lastName}}</h5>
+                <p class="card-text" [ngClass]="{'text-success':!selectedUser.isDeleted,'text-danger':selectedUser.isDeleted}">
+                    {{selectedUser.isDeleted ?"Deleted": "Active"}}
+                </p>
+                <div class="row mb-3">
+                    <div class="col-sm">Login Id</div>
+                    <div class="col-sm">{{selectedUser.login}}</div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-sm">First Name</div>
+                    <div class="col-sm">{{selectedUser.firstName}}</div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-sm">Last Name</div>
+                    <div class="col-sm">{{selectedUser.lastName}}</div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-sm">Age</div>
+                    <div class="col-sm">{{selectedUser.age}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
