@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 mt-5">
+            <div class="container-fluid my-3" *ngFor="let user of users">
+                <div class="card border-2" *ngIf="user" [class.border-success]="!user.isDeleted"
+                    [class.border-danger]="user.isDeleted">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">
+                            {{(user.firstName | fullName:user.lastName) | titlecase}}
+                        </h5>
+                        <div class="btn-toolbar justify-content-between mt-2">
+                            <button type="button" class="btn btn-sm btn-warning px-3" (click)="onEdit(user)">
+                                Edit
+                            </button>
+                            <button type="button" class="btn btn-sm btn-primary" (click)="onSelect(user)">
+                                {{btnName}}
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 right">
+            <div class="row mx-3 mt-3">
+                <div class="col d-flex justify-content-end">
+                    <button class="btn btn-sm btn-success px-3" (click)="createUser()" type="button">
+                        Create
+                    </button>
+                </div>
+            </div>
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+
+</div>
