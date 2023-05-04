@@ -56,12 +56,6 @@ describe('ActiveUserComponent', () => {
   it("Button text should be Deactivate",()=>{
     expect(component.btnName).toEqual("Deactivate");
   });
-
-  /*xit("should call the getUsers on ngOnInit",()=>{
-    spyOn(component,'getUsers');
-    component.ngOnInit();
-    expect(component.getUsers).toHaveBeenCalled();
-  });*/
   
   it("should get the users on ngOnInit",waitForAsync(
     inject([UserService],(userService:UserService)=>{

@@ -49,26 +49,6 @@ describe('EditUserComponent', () => {
     })
   ));
 
-  /*xit('should call edit user on edit button click',waitForAsync(
-    inject([UserService],(userService:UserService)=>{
-      const formData={
-        "password": "Led@123",
-        "age": 34
-      }
-      component.selectedUser=dummyUser;
-      component.editForm.setValue(formData);
-      let updatedUser=dummyUser;
-      updatedUser.password=formData.password;
-      updatedUser.age=formData.age;
-      spyOn(userService,'editUser').and.returnValue(of(updatedUser));
-      spyOn(component,'updateUser');
-      component.updateUser();
-      fixture.detectChanges();
-      expect(component.selectedUser.password).toEqual(formData.password);
-      expect(component.selectedUser.age).toEqual(formData.age);
-      expect(component.selectedUser).toEqual(updatedUser);
-    })
-  ));*/
 
   it('should have the specified labels',()=>{
     component.selectedUser=dummyUser;

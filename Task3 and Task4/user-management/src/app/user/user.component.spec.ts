@@ -69,12 +69,6 @@ describe('UserComponent', () => {
     expect(fullName?.textContent).toEqual(dummyUser.firstName+" "+dummyUser.lastName);
   });
 
-  /*xit("should have red border if user is deleted or else green border",()=>{
-    expect(element.querySelector('.border-success')).toBeTruthy();
-    dummyUser.isDeleted=true;
-    fixture.detectChanges();
-    expect(element.querySelector('.border-danger')).toBeTruthy();
-  });*/
 
   it("should have the button name Activate and button should be success",()=>{
       component.btnName="Activate";

@@ -65,23 +65,6 @@ describe('UserDetailComponent', () => {
         expect(component.selectedUser).toEqual(dummyUser);
     })
   ));
-
-  /*xit('should check all the data bindings of selected user',()=>{
-    expect(element.querySelector('.login')?.innerHTML.trim()).toEqual('bradford.ledner');
-    expect(element.querySelector('.fName')?.innerHTML.trim()).toEqual('Bradford');
-    expect(element.querySelector('.lName')?.innerHTML.trim()).toEqual('Ledner');
-    expect(element.querySelector('.age')?.innerHTML.trim()).toEqual('36');
-    expect(element.querySelector('.updated')?.innerHTML.trim()).toEqual('Apr 20, 2023');
-  });
-
-  xit('should check the class binding based on isDeleted',()=>{
-    expect(element.querySelector('.text-success')).toBeTruthy();
-    expect(element.querySelector('.card-text')?.innerHTML.trim()).toEqual('Active');
-    component.selectedUser.isDeleted=true;
-    fixture.detectChanges();
-    expect(element.querySelector('.text-danger')).toBeTruthy();
-    expect(element.querySelector('.card-text')?.innerHTML.trim()).toEqual('Deleted');
-  });*/
   
 
 });
