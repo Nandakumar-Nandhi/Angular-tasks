@@ -76,9 +76,5 @@ describe('UserListComponent', () => {
     expect(element.querySelector('app-user')).toBeFalsy();
   });
 
-  /*xit('should check the length of the users without any filter type',()=>{
-    const users=fixture.debugElement.queryAll(By.css('app-user'));
-    expect(users.length).toEqual(dummyUsers.length);
-  });*/
 
 });
