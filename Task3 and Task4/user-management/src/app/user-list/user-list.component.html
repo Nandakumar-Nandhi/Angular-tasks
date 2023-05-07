@@ -1,0 +1,3 @@
+<div class="container-fluid my-3 demo" *ngFor="let user of users | filterUser : btnName">
+    <app-user [user]="user" [callBack]="callBack" [btnName]="btnName"></app-user>
+</div>

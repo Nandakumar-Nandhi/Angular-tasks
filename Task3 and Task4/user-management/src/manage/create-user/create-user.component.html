@@ -1,0 +1,50 @@
+<div class="container-fluid my-4">
+    <form class="form" [formGroup]="registrationForm">
+        <div class="form-group mb-3">
+            <label class="mb-2">First Name</label>
+            <input type="text"
+                [class.is-invalid]="registrationForm.get('firstName')?.invalid && registrationForm.get('firstName')?.touched"
+                formControlName="firstName" class="form-control mb-2">
+            <small
+                [class.d-none]="registrationForm.get('firstName')?.valid || registrationForm.get('firstName')?.untouched"
+                class="text-danger">First Name is required</small>
+        </div>
+        <div class="form-group mb-3">
+            <label class="mb-2">Last Name</label>
+            <input type="text"
+                [class.is-invalid]="registrationForm.get('lastName')?.invalid && registrationForm.get('lastName')?.touched"
+                formControlName="lastName" class="form-control mb-2">
+            <small
+                [class.d-none]="registrationForm.get('lastName')?.valid || registrationForm.get('lastName')?.untouched"
+                class="text-danger">Last Name is required</small>
+        </div>
+        <div class="form-group mb-3">
+            <label class="mb-2">Login</label>
+            <input type="text"
+                [class.is-invalid]="registrationForm.get('login')?.invalid && registrationForm.get('login')?.touched"
+                formControlName="login" class="form-control mb-2">
+            <small [class.d-none]="registrationForm.get('login')?.valid || registrationForm.get('login')?.untouched"
+                class="text-danger">Login is required</small>
+        </div>
+        <div class="form-group mb-3">
+            <label class="mb-2">Password</label>
+            <input type="password"
+                [class.is-invalid]="registrationForm.get('password')?.invalid && registrationForm.get('password')?.touched"
+                formControlName="password" class="form-control mb-2">
+            <small
+                [class.d-none]="registrationForm.get('password')?.valid || registrationForm.get('password')?.untouched"
+                class="text-danger">Password is required</small>
+        </div>
+        <div class="form-group mb-3">
+            <label class="mb-2">Age</label>
+            <input type="number"
+                [class.is-invalid]="registrationForm.get('age')?.invalid && registrationForm.get('age')?.touched"
+                formControlName="age" class="form-control mb-2">
+            <small
+                [class.d-none]="registrationForm.get('age')?.valid || registrationForm.get('age')?.untouched"
+                class="text-danger">Age is required</small>
+        </div>
+        <button type="button" (click)="submitForm()" class="btn btn-sm btn-primary px-3">Submit</button>
+    </form>
+
+</div>

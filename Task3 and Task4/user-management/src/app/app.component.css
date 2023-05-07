@@ -1,0 +1,16 @@
+li a.active{
+    font-weight: bold;
+    color: #0275d8;
+}
+
+li a:hover{
+    font-weight: bold;
+}
+
+.navbar{
+    padding-right: 30px;
+}
+
+hr{
+    margin: 0 10px;
+}
