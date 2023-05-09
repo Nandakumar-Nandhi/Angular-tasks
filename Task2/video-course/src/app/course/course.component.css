@@ -1,0 +1,22 @@
+.card{
+    background: #FFFFFF;
+	box-shadow: 0 1px 2px 0 rgba(29,30,38,0.10), 0 2px 10px 0 rgba(29,30,38,0.15);
+}
+
+.header{
+    align-items: baseline;
+}
+
+.description{
+    text-align: justify;
+    margin-right: 20px;
+    width: 80%;
+}
+
+.edit,.delete{
+    height: 30px;
+    margin: 5px;
+    width: 80px;
+}
+
+

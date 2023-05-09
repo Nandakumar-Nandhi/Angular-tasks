@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-sm-4">
+            <div class="card px-4 py-4">
+                <div class="d-flex justify-content-between heading">
+                    <h4 class="mb-4">Login</h4>
+                    <p class="text-danger" [class.d-none]="logged">Wrong email or password</p>
+                </div>
+                <form class="form">
+                    <div class="form-group mb-4">
+                        <div class="d-flex justify-content-between mb-3">
+                            <h6>Email: </h6>
+                            <label class="required">* required</label>
+                        </div>
+                        <input type="email" name="email" [value]="loginValues.email" placeholder="Enter e-mail"
+                            (keyup)="onType($event)">
+                    </div>
+                    <div class="form-group mb-4">
+                        <div class="d-flex justify-content-between mb-3">
+                            <h6>Password: </h6>
+                            <label class="required">* required</label>
+                        </div>
+                        <input type="password" name="password" [value]="loginValues.password"
+                            placeholder="Enter password" (keyup)="onType($event)">
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <a href="#">Forgot password?</a>
+                        <button type="button" class="btn btn-sm px-3" (click)="login()">Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    {{renderLogin()}}
+</div>

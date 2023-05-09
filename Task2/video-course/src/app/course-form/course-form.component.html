@@ -1,0 +1,61 @@
+<div class="container my-5 addCourseCard">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-sm-6">
+            <div class="card">
+                <h1>New Course</h1>
+                <form class="form">
+                    <div class="form-group mb-3">
+                        <div class="d-flex justify-content-between">
+                            <label class="mb-2">Title : </label>
+                            <p>* required</p>
+                        </div>
+                        <input class="mb-2 title" required name="videoTitle" (keyup)="onType($event)"
+                            [value]="formValues.videoTitle" type="text" placeholder="Title for the course">
+                    </div>
+                    <div class="form-group">
+                        <div class="d-flex justify-content-between">
+                            <label class="mb-2">Description : </label>
+                            <p>* required</p>
+                        </div>
+                        <textarea class="mb-2" required name="description" (keyup)="onType($event)"
+                            [value]="formValues.description" spellcheck="false"
+                            placeholder="Description of the course"></textarea>
+                    </div>
+                    <div class="form-group mb-3">
+                        <div class="d-flex">
+                            <label class="mb-2">Date : </label>
+                            <p class="ps-5">* required</p>
+                        </div>
+                        <input class="mb-2" required name="date" (change)="getDate($event)" [value]="formValues.date"
+                            type="date" placeholder="Course creation date">
+                    </div>
+                    <div class="form-group mb-3">
+                        <div class="d-flex">
+                            <label class="mb-2 pe-3">Duration : </label>
+                            <p class="ps-5">* required</p>
+                        </div>
+                        <input class="mb-2 minutes" required name="duration" (keyup)="onType($event)"
+                            [value]="formValues.duration " placeholder="Duration in minutes" type="number">
+                        <span class="hours">{{formValues.duration | timeHours}}</span>
+                    </div>
+                    <div class="form-group mb-3">
+                        <div class="d-flex">
+                            <label class="mb-2 pe-4">Authors : </label>
+                            <p class="ps-5">* required</p>
+                        </div>
+                        <input class="mb-2" required name="authors" (keyup)="onType($event)"
+                            [value]="formValues.authors" placeholder="Name of Authors" type="text">
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <button type="button" class="btn btn-sm cancel" (click)="clear()">Cancel</button>
+                        <button type="submit" class="btn btn-sm save" (click)="onSave()">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div>
+    {{renderCourseForm()}}
+</div>

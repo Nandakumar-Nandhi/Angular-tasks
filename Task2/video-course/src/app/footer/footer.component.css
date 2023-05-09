@@ -1,0 +1,20 @@
+.d-flex{
+    align-items: baseline;
+}
+
+.header-bg {
+	background: #303240;
+    color: white;
+    padding:15px 15px;
+}
+
+p{
+    margin: 0px;
+    font-size: 13px;
+}
+
+footer{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
