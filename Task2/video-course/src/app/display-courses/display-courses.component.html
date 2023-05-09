@@ -1,0 +1,36 @@
+<div class="container my-5">
+    <div class="container">
+        <input type="text" class="searchInput px-2" name="search" (keyup)="onType($event)" placeholder="Type to search">
+        <button type="button" class="btn btn-sm search ms-3" (click)="searchVideos()">Search</button>
+    </div>
+
+    <div class="container mt-3 d-flex justify-content-end">
+        <button type="button" class="btn btn-sm btn-primary" (click)="addCourse()">
+            <i class="fa fa-plus-circle"></i> Add Course</button>
+    </div>
+
+    <div *ngIf="(courses.length > 0);else elseBlock">
+        <div class="container-fluid" *ngFor="let course of courses">
+            <app-course [course]="course" [callback]="deleteCourse"></app-course>
+        </div>
+    </div>
+
+    <ng-template #elseBlock>
+        <div class="container">
+            <div class="card my-3 py-5">
+                <h3>No courses to display</h3>
+            </div>
+        </div>
+    </ng-template>
+
+    <div class="container">
+        <div class="card">
+            <button type="button" class="btn btn-link" (click)="loadMore()">Load more</button>
+        </div>
+    </div>
+
+</div>
+
+<div>
+    {{renderDisplayCourses()}}
+</div>

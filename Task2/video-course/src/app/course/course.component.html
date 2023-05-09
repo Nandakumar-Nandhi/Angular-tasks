@@ -1,0 +1,20 @@
+<div *ngIf="course" class="card my-3 p-3">
+    <div class="container header d-flex justify-content-between">
+        <h4>{{course.videoTitle}}</h4>
+        <div class="d-flex">
+            <p class="pe-3"><i class='fa fa-clock-o'></i> {{course.duration | timeHours}}</p>
+            <p class="pe-3"><i class='fa fa-calendar'></i> {{course.date}}</p>
+        </div>
+    </div>
+    <div class="container d-flex">
+        <p class="description">{{course.description}}</p>
+        <button type="button" class="btn btn-sm btn-primary edit" (click)="onClickEdit()"><i class="fa fa-edit"></i>
+            Edit</button>
+        <button type="button" class="btn btn-sm btn-primary delete" (click)="callback(course.id)"><i class="fa fa-trash"
+                aria-hidden="true"></i> Delete</button>
+    </div>
+</div>
+
+<div>
+    {{renderCourse()}}
+</div>

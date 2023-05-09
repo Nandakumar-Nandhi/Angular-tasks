@@ -1,0 +1,23 @@
+.container,.container-fluid{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.newCourse{
+    margin: auto 50px;
+    padding: 10px 0px;
+}
+
+nav{
+    background-color: rgb(247, 241, 241);
+    padding: 8px 40px;
+}
+
+a{
+    text-decoration: none;
+    color: grey;
+}
+
+.active{
+   color: black;
+   font-weight: bold;
+}
