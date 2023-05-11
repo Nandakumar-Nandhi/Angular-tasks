@@ -1,0 +1,8 @@
+<div class="container-fluid header-bg d-flex justify-content-between">
+    <h3 class="video-course ms-5">VIDEO COURSE</h3>
+    <div class="d-flex me-5">
+        <a class="me-5" *ngIf="userName"><i class="fa fa-user me-1"></i>{{userName}}</a>
+        <a class="me-5" routerLink="/login" *ngIf="userName"><i class="fa fa-sign-out me-1"></i>Log out</a>
+    </div>
+</div>
+<div>{{renderHeader()}}</div>

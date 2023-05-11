@@ -1,0 +1,24 @@
+.container-fluid{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.header-bg {
+	background: #303240;
+	align-items: baseline;
+}
+h3{
+	margin: 0;
+}
+
+.video-course {
+	color: #FFFFFF;
+	font-size: 18px;
+	text-align: left;
+	font-weight: 700;
+    padding: 15px 5px;
+}
+
+a{
+	color: white;
+	text-decoration: none;
+}
